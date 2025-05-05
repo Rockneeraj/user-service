@@ -27,11 +27,13 @@ This microservice handles user registration, login, deletion, and listing. It is
 - **Method**: `POST`
 - **Request Body**:
 
+```json
 {
   "username": "admin",
   "password": "root123"
 }
 
+```
 
 ### 3. Delete a User
 - **URL**: `/users/<username>`
@@ -49,19 +51,24 @@ This microservice handles user registration, login, deletion, and listing. It is
 
 ## How to Run with Docker
 
+```bash
 docker build -t user-service:latest .
 docker run -p 5000:5000 user-service:latest
-
+```
 
 ## How to Deploy to Kubernetes
 
+```bash
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 
+```
 
 ## Default Credentials
+```bash
 - Username: `admin`
 - Password: `root123`
 
+```
 
 
